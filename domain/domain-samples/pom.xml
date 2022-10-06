@@ -11,5 +11,26 @@
 
     <artifactId>domain-samples</artifactId>
 
+    <properties>
+        <sampler.spring.version>1.0.0</sampler.spring.version>
+    </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>pl.koleszko.software.user-transactions</groupId>
+            <artifactId>domain-model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>pl.wavesoftware.sampler</groupId>
+            <artifactId>sampler-spring</artifactId>
+            <version>${sampler.spring.version}</version>
+        </dependency>
+    </dependencies>
 </project>
