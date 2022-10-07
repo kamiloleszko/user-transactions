@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="employee-table:create" author="koleszko">
+        <createTable tableName="EMPLOYEE">
+
+            <column name="EMPLOYEE_ID" type="number">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="EMPLOYEE_ID_PK"/>
+            </column>
+
+            <column name="FIRST_NAME" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="LAST_NAME" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="MODIFICATION_DATE" type="${date}" defaultValueComputed="${sysdate}">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="CREATION_DATE" type="${date}" defaultValueComputed="${sysdate}">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="employee-table:unique-constraint" author="koleszko">
+        <addUniqueConstraint tableName="EMPLOYEE"
+                             columnNames="FIRST_NAME, LAST_NAME"
+                             constraintName="EMP_FIRST_LAST_NAME_UNIQUE"/>
+    </changeSet>
+
+    <changeSet id="employee-table:sequence" author="koleszko">
+        <createSequence incrementBy="2"
+                        sequenceName="EMPLOYEE_ID_SEQUENCE"
+                        minValue="2"
+                        startValue="2"/>
+    </changeSet>
+
+</databaseChangeLog>
