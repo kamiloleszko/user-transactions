@@ -3,7 +3,6 @@ package pl.koleszko.software.usertransactions.infrastructure.employee;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 import pl.koleszko.software.usertransactions.domainmodel.employee.Employee;
 import pl.koleszko.software.usertransactions.domainmodel.employee.EmployeeException;
 import pl.koleszko.software.usertransactions.domainmodel.employee.EmployeeRepository;
@@ -20,7 +19,6 @@ class EmployeeRepositoryImpl implements EmployeeRepository {
     private final EmployeeDao dao;
 
     @Override
-    @Transactional
     public void save(Employee employee) {
         try {
             dao.insert(employee);

@@ -28,6 +28,10 @@
                 <constraints nullable="false"/>
             </column>
 
+            <column name="DELETED" type="BOOLEAN" defaultValue="0">
+                <constraints nullable="false"/>
+            </column>
+
         </createTable>
     </changeSet>
 
@@ -41,6 +45,6 @@
         <createSequence incrementBy="2"
                         sequenceName="EMPLOYEE_ID_SEQUENCE"
                         minValue="2"
-                        startValue="2"/>
+                        startValue="100"/>
     </changeSet>
 </databaseChangeLog>
