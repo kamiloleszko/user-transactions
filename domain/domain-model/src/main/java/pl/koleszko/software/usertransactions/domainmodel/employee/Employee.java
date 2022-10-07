@@ -1,4 +1,4 @@
-package pl.koleszko.software.usertransactions.domainlogic.employee;
+package pl.koleszko.software.usertransactions.domainmodel.employee;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

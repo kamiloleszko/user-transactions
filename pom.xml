@@ -27,6 +27,7 @@
         <sampler.spring.version>1.0.0</sampler.spring.version>
         <spring.test.db.unit.version>1.3.0</spring.test.db.unit.version>
         <dbunit.version>2.7.2</dbunit.version>
+        <apache.common.lang.version>3.10</apache.common.lang.version>
     </properties>
 
     <dependencyManagement>
@@ -73,6 +74,12 @@
                 <groupId>org.dbunit</groupId>
                 <artifactId>dbunit</artifactId>
                 <version>${dbunit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.common.lang.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

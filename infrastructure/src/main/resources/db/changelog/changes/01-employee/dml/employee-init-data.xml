@@ -6,7 +6,6 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <changeSet id="employee:insert" author="koleszko">
-
         <insert tableName="EMPLOYEE">
             <column name="EMPLOYEE_ID" value="2"/>
             <column name="FIRST_NAME" value="JAN"/>
@@ -32,6 +31,4 @@
         </insert>
 
     </changeSet>
-
-
 </databaseChangeLog>

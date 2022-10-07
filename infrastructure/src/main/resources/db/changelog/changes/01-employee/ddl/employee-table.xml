@@ -43,5 +43,4 @@
                         minValue="2"
                         startValue="2"/>
     </changeSet>
-
 </databaseChangeLog>
