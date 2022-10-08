@@ -12,9 +12,9 @@
     <artifactId>api</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>api-samples</module>
         <module>api-web</module>
         <module>api-shared</module>
+        <module>api-sample</module>
     </modules>
 
 

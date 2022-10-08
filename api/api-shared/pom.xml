@@ -19,6 +19,12 @@
         </dependency>
 
         <dependency>
+            <groupId>pl.koleszko.software.user-transactions</groupId>
+            <artifactId>domain-logic</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
